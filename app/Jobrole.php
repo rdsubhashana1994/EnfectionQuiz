@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class jobrole extends Model
+class Jobrole extends Model
 {
     public $fillable = [
       'role',
     ];
 
     public function employee(){
-        return $this->belongsTo('App\employer');
+        return $this->belongsTo('App\user');
     }
 
     public function questiontype(){

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class questiontype extends Model
+class Questiontype extends Model
 {
     public $fillable = [
       'type'
