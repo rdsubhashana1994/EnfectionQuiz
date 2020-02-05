@@ -10,7 +10,8 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 let routes = [
-    {path: '/admin-registration', component: require('./components/registration.vue').default},
+    { path: '/admin-registration', component: require('./components/registration.vue').default },
+    { path: '/login', component: require('./components/login.vue').default },
 ];
 
 const router = new VueRouter({

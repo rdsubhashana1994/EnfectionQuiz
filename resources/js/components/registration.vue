@@ -22,26 +22,33 @@
                        v-model="users.nic_number"
                        placeholder="943482381v">
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control"
-                        id="exampleFormControlSelect1"
-                        name="occupation"
-                        v-model="users.occupation">
-                    <option disabled value="">Please select one</option>
-                    <option>Admin</option>
-                    <option>User</option>
-                </select>
+
+            <div class="row">
+                <div class="col form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control"
+                            id="exampleFormControlSelect1"
+                            name="occupation"
+                            v-model="users.occupation">
+                        <option disabled value="">Please select one</option>
+                        <option>Admin</option>
+                        <option>User</option>
+                    </select>
+                </div>
+                <div class="col form-group">
+                    <label for="formGroupExampleInput4">Telephone</label>
+                    <input type="number"
+                           class="form-control"
+                           id="formGroupExampleInput4"
+                           name="telephone"
+                           v-model="users.telephone"
+                           placeholder="0778152905">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput4">Telephone</label>
-                <input type="number"
-                       class="form-control"
-                       id="formGroupExampleInput4"
-                       name="telephone"
-                       v-model="users.telephone"
-                       placeholder="0778152905">
-            </div>
+
+
+
+
             <div class="form-group">
                 <label for="formGroupExampleInput5">Email</label>
                 <input type="email"
