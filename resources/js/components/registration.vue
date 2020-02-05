@@ -23,13 +23,15 @@
                        placeholder="943482381v">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput3">Occupation</label>
-                <input type="text"
-                       class="form-control"
-                       id="formGroupExampleInput3"
-                       name="occupation"
-                       v-model="users.occupation"
-                       placeholder="Associate Web Developer">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control"
+                        id="exampleFormControlSelect1"
+                        name="occupation"
+                        v-model="users.occupation">
+                    <option disabled value="">Please select one</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput4">Telephone</label>
@@ -56,12 +58,12 @@
                        id="formGroupExampleInput6"
                        name="password"
                        v-model="users.password"
-                       placeholder="dilshan123">
+                       placeholder="Dilshan_123">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
 
-        <div v-if="error" class="alert alert-warning" role="alert">
+        <div v-if="error" class="alert alert-warning mt-3" role="alert">
             {{ message }}
         </div>
 
@@ -100,7 +102,6 @@
                             this.message = response.data.data;
                         }
                     });
-
             }
         }
     }

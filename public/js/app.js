@@ -1982,6 +1982,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37464,36 +37466,51 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "formGroupExampleInput3" } }, [
-            _vm._v("Occupation")
+          _c("label", { attrs: { for: "exampleFormControlSelect1" } }, [
+            _vm._v("Example select")
           ]),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.users.occupation,
-                expression: "users.occupation"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              id: "formGroupExampleInput3",
-              name: "occupation",
-              placeholder: "Associate Web Developer"
-            },
-            domProps: { value: _vm.users.occupation },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.users.occupation,
+                  expression: "users.occupation"
                 }
-                _vm.$set(_vm.users, "occupation", $event.target.value)
+              ],
+              staticClass: "form-control",
+              attrs: { id: "exampleFormControlSelect1", name: "occupation" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.users,
+                    "occupation",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                }
               }
-            }
-          })
+            },
+            [
+              _c("option", { attrs: { disabled: "", value: "" } }, [
+                _vm._v("Please select one")
+              ]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Admin")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("User")])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-group" }, [
@@ -37581,7 +37598,7 @@ var render = function() {
               type: "password",
               id: "formGroupExampleInput6",
               name: "password",
-              placeholder: "dilshan123"
+              placeholder: "Dilshan_123"
             },
             domProps: { value: _vm.users.password },
             on: {
@@ -37606,7 +37623,7 @@ var render = function() {
     _vm.error
       ? _c(
           "div",
-          { staticClass: "alert alert-warning", attrs: { role: "alert" } },
+          { staticClass: "alert alert-warning mt-3", attrs: { role: "alert" } },
           [_vm._v("\n        " + _vm._s(_vm.message) + "\n    ")]
         )
       : _vm._e()
